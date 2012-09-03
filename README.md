@@ -24,7 +24,7 @@ Otherwise symlink, copy the file, or copy its contents to ~/.tmux.conf
 This adds Vim auto-saving support when running within tmux.
 When any command is run on the command line, be it `ls` or 
 even just hitting ENTER, all Vim sessions running within
-this tmux session will be written.
+all tmux sessions (of this tmux server) will be written.
 
 ### Autosave Installation 
 To enable VIM autosaving, add the following to your .bash\_profile, .bashrc, or .profile:
