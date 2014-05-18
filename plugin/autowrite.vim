@@ -42,4 +42,6 @@ if &term == "screen-256color"
   set t_F9=[33~
 endif
 
-map <silent> <F19>WriteAll :silent! wall<CR>
+nmap <silent> <F19>WriteAll :silent! wall<CR>
+imap <silent> <F19>WriteAll <C-o><F19>WriteAll
+vmap <silent> <F19>WriteAll <Esc><F19>WriteAllgv
