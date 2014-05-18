@@ -24,7 +24,7 @@ function! s:RemoveVimPane()
 endfunction
 
 function! s:CurrentVimPane()
-  return join([s:chomp(system('echo $TMUX_PANE')), s:chomp(system('ps $$ -otty=')), getpid()], " ")
+  return join([s:chomp(system('echo $TMUX_PANE')), s:chomp(system('ps -otty= $$')), getpid()], " ")
 endfunction
 
 function! s:chomp(string)
