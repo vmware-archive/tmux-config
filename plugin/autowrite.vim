@@ -24,7 +24,7 @@ function! s:RemoveVimPane()
 endfunction
 
 function! s:CurrentVimPane()
-  return join([s:chomp(system('echo $TMUX_PANE')), s:chomp(system('ps $$ -otty=')), getpid()], " ")
+  return join([s:chomp(system('echo $TMUX_PANE')), s:chomp(system('ps -otty= $$')), getpid()], " ")
 endfunction
 
 function! s:chomp(string)
@@ -42,4 +42,10 @@ if &term == "screen-256color"
   set t_F9=[33~
 endif
 
-map <silent> <F19>WriteAll :silent! wall<CR>
+nnoremap <silent> <F19>WriteAll :silent! wall<CR>
+inoremap <silent> <F19>WriteAll <C-o>:silent! wall<CR>
+vnoremap <silent> <F19>WriteAll <Esc>:silent! wall<CR>gv
+
+nnoremap <silent> <F19>AutoReload :silent! checktime<CR>
+inoremap <silent> <F19>AutoReload <C-o>:silent! checktime<CR>
+vnoremap <silent> <F19>AutoReload <Esc>:silent! checktime<CR>gv
