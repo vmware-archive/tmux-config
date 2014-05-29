@@ -45,3 +45,7 @@ endif
 nnoremap <silent> <F19>WriteAll :silent! wall<CR>
 inoremap <silent> <F19>WriteAll <C-o>:silent! wall<CR>
 vnoremap <silent> <F19>WriteAll <Esc>:silent! wall<CR>gv
+
+nnoremap <silent> <F19>AutoReload :silent! checktime<CR>
+inoremap <silent> <F19>AutoReload <C-o>:silent! checktime<CR>
+vnoremap <silent> <F19>AutoReload <Esc>:silent! checktime<CR>gv
