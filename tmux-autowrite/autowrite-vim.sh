@@ -7,7 +7,7 @@
 # - preexec.sh.lib
 # - .vim/init/autowrite.vim
 
-source $(dirname $BASH_SOURCE[0])/preexec.sh.lib
+source $(dirname $0)/preexec.sh.lib
 
 # Things that could go wrong:
 # √ No vim
